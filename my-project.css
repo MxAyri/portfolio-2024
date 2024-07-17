@@ -1,0 +1,130 @@
+:root {
+    --main-color: #553AFD;
+}
+
+.portfolio {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 60px 0px 60px;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    align-items: center;
+}
+
+.portfolio-card-cont {
+    padding: 48px 0 110px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    bottom: 0;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.portfolio-card img{
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid var(--main-color);
+}
+
+.portfolio-card-svg {
+    fill: var(--main-color);
+    transition: 500ms;
+}
+
+.portfolio-card-arrow {
+    position: absolute;
+    padding: 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 30px;
+    top: 10px;
+    right: 10px;
+    transition: 500ms;
+}
+
+.portfolio-card-txt {
+    position: absolute;
+    color: white;
+    left: 20px;
+    bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    transition: 500ms;
+}
+
+.portfolio-card:hover .portfolio-card-svg {
+    fill: #000;
+}
+
+.portfolio-card:hover .portfolio-card-arrow {
+    border: 1px solid #000;
+}
+
+.portfolio-card:hover .portfolio-card-txt {
+    color: var(--main-color);
+}
+
+
+@media (max-width: 1360px) {
+    .portfolio-card img{
+        width: 500px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .portfolio-title h2{
+        font-size: 50px;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 900px) {
+    .portfolio{
+        padding: 40px 0;
+    }
+    .portfolio-title{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 0;
+    }
+    .portfolio-card-cont{
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: 550px) {
+    .portfolio-title h2{
+        font-size: 30px;
+        max-width: 300px;
+    }
+    .portfolio-card-arrow{
+        padding: 5px;
+        display: flex;
+        align-items: center;
+    }
+    .portfolio-card-svg{
+        width: 15px;
+        height: 15px;
+    }
+    .portfolio-card-txt{
+        font-size: 18px;
+    }
+    .my-service-title-btn{
+        font-size: 14px;
+    }
+    .portfolio-card img{
+        width: 300px;
+    }
+}
